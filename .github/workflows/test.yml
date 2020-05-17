@@ -15,4 +15,4 @@ jobs:
       run: echo Hello World
 
     - name: Check secret value
-      run: echo ${{ secrets.MY_SUPER_CREDENTIAL }} | sha256
+      run: echo ${{ secrets.MY_SUPER_CREDENTIAL }} | sha256sum
