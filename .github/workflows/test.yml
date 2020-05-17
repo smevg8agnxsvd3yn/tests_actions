@@ -1,6 +1,9 @@
 name: Test
 
-on: [push]
+on:
+  push:
+    branch:
+      - master
 
 jobs:
   coding-style:
@@ -10,3 +13,6 @@ jobs:
     steps:
     - name: Hello
       run: echo Hello World
+
+    - name: Check secret value
+      run: echo ${{ secrets.MY_SUPER_CREDENTIAL }} | sha256
